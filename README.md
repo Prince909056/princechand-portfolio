@@ -11,6 +11,7 @@
 <p align="center">
   <a href="#-key-features">Key Features</a> •
   <a href="#-engineering-problems-solved">Problems Solved</a> •
+  <a href="#-github-actions-cicd-pipeline">CI/CD Pipeline</a> •
   <a href="#-environment-configuration">Environment Config</a> •
   <a href="#-angular-architecture">Angular Architecture</a> •
   <a href="#-getting-started">Getting Started</a>
@@ -20,19 +21,21 @@
 
 ## 🚀 Overview
 
-This repository contains the official, high-performance **Angular Portfolio Application** for **Prince Chand**. Built with modern **Angular 20 Standalone Components**, **Angular Signals**, and **Control Flow Syntax (`@for`, `@if`)**, the application showcases real-world engineering impact, complex problem-solving outcomes, and system architecture metrics.
+This repository contains the official, high-performance **Angular Portfolio Application** for **Prince Chand**. Built with modern **Angular 20 Standalone Components**, **Angular Signals**, and **Control Flow Syntax (`@for`, `@if`)**, the application showcases real-world engineering impact, complex problem-solving outcomes, system architecture metrics, and continuous integration/deployment automation.
 
 ### Highlights:
 - 💡 **Outcome-Driven Portfolio**: Focuses on real-world engineering problems solved and quantitative technical impact rather than basic project listing.
-- 🌙 **Day/Night Theme Switcher**: Defaults to **Dark Mode** (`#090d16`) with seamless reactive toggling to Light Mode and persistent state.
+- 🤖 **Automated CI/CD Deployment**: Integrated GitHub Actions pipeline ([`.github/workflows/deploy.yml`](file:///c:/prince_chand/portfolio-01/.github/workflows/deploy.yml)) providing zero-touch continuous integration and automated deployment to **GitHub Pages**.
+- 🌙 **Day/Night Theme Switcher**: Defaults to **Dark Mode** (`#090d16`) with seamless reactive toggling to Light Mode and persistent state memory.
 - ⚙️ **Configurable Environments**: All social profile URLs, total experience metrics, and award verification links are dynamically bound via `.env` / `environment.ts` configuration.
-- ⚡ **Modern Angular 20**: Utilizes Standalone Component architecture and Signal-based state management (`ThemeService`, `ToastService`).
+- ⚡ **Modern Angular 20**: Utilizes Standalone Component architecture and Signal-based state management (`ThemeService`, `ToastService`, `NavbarComponent`).
 - 🎨 **Visual Aesthetics**: Designed with glassmorphic cards, custom gradient glows, animated metric counters, responsive tab filtering, and custom typography (`Outfit` & `Inter`).
 
 ---
 
 ## ✨ Key Features
 
+- **Automated CI/CD Pipeline**: Continuous integration & deployment via GitHub Actions that automatically compiles and publishes the Angular application on push to `main`.
 - **Active Section Highlighting**: Signal-driven active navigation tracking in `NavbarComponent` that highlights menu headings dynamically on click and scroll position.
 - **Interactive Category Filtering**: Filter technical solutions seamlessly between `All`, `AI & Voice Systems`, `Performance & DB`, `Biotech & Hardware`, and `Enterprise Payroll`.
 - **Reactive Theme System**: Signal-driven Day & Night theme switch that updates DOM attributes (`data-theme`) instantly while preserving preferences in `localStorage`.
@@ -52,6 +55,33 @@ This repository contains the official, high-performance **Angular Portfolio Appl
 | **Hardware Interfacing & Biotech Diagnostics** *(Biotech & Hardware)* | Developed Web API interfacing with Laser and DAQ-205 lab hardware devices executing protein sequence algorithms. | **Streamlined Lab Hardware-Cloud Pipeline** | `ASP.NET Core API`, `Hardware DAQ-205`, `Angular 17`, `Azure` |
 | **Multi-User Payroll & Accounting** *(Enterprise Payroll)* | Architected a 1-click salary engine supporting single & double-entry accounting with automated balance sheets. | **60% Manual Payroll Effort Reduction** | `ASP.NET Core MVC`, `EF Core`, `LINQ`, `MySQL` |
 | **APNs Push Certificate Inspection** *(Security & Utility)* | Built a C# utility to parse, validate expiration, and extract metadata from Apple Push (.p8, .p12, .pem) certificates. | **Zero Configuration Downtime** | `C#`, `ASP.NET Core API`, `APNs Certificates` |
+
+---
+
+## 🤖 GitHub Actions CI/CD Pipeline
+
+The project features a full **Continuous Integration & Continuous Deployment (CI/CD)** pipeline configured in [`.github/workflows/deploy.yml`](file:///c:/prince_chand/portfolio-01/.github/workflows/deploy.yml).
+
+### Workflow Diagram:
+
+```mermaid
+graph TD
+    A[Push to main branch] --> B[Job: Build]
+    B --> C[Checkout Code actions/checkout@v4]
+    C --> D[Setup Node.js v20 & npm Cache]
+    D --> E[Install Dependencies npm ci]
+    E --> F[Compile Angular Build ng build --base-href /princechand-portfolio/]
+    F --> G[Upload Artifact actions/upload-pages-artifact@v3]
+    G --> H[Job: Deploy]
+    H --> I[Deploy to GitHub Pages actions/deploy-pages@v4]
+    I --> J[Live Portfolio Updated 🎉]
+```
+
+### Pipeline Key Specifications:
+- 🔄 **Trigger**: Automated execution on git `push` to `main` branch or manual `workflow_dispatch`.
+- ⚡ **Build Optimization**: Uses Node.js 20 with `npm` dependency caching for fast build execution times.
+- 🔒 **Permissions & Concurrency**: Configured with `pages: write` and `id-token: write` scopes, plus `cancel-in-progress: true` concurrency grouping to prevent redundant deployment runs.
+- 🌐 **Live Target**: Deploys the `./dist/portfolio-ng/browser` output directly to **GitHub Pages**.
 
 ---
 
@@ -78,28 +108,34 @@ PHONE_NUMBER=(+91) 9888725336
 
 ## 🏛️ Angular Architecture
 
-The application is structured into modular Standalone Components and reactive Services:
+The application is structured into modular Standalone Components, reactive Services, and automated CI/CD workflows:
 
 ```text
-src/
-├── app/
-│   ├── app.component.ts             # Root shell component & toast container
-│   ├── app.config.ts                # Angular application configuration
-│   ├── components/
-│   │   ├── navbar/                  # Sticky blur navigation, logo & theme toggle
-│   │   ├── hero/                    # Hero banner, headshot card & animated counters
-│   │   ├── problems-solved/         # Problem cards showcase & signal tab filters
-│   │   ├── skills/                  # Core skills & architecture patterns grid
-│   │   ├── achievements/            # Award cards with direct verification links
-│   │   ├── experience/              # Professional experience (3.8 Years) & degree timeline
-│   │   ├── contact/                 # Email copy pill, phone call & LinkedIn links
-│   │   └── footer/                  # Clean footer information
-│   └── services/
-│       ├── theme.service.ts         # Signal-based Day/Night theme switcher & storage
-│       └── toast.service.ts         # Signal-based toast notification service
-└── environments/
-    ├── environment.ts               # Development environment configuration
-    └── environment.prod.ts          # Production environment configuration (fileReplacements mapping)
+portfolio-01/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml               # GitHub Actions CI/CD deployment pipeline
+├── src/
+│   ├── app/
+│   │   ├── app.component.ts         # Root shell component & toast container
+│   │   ├── app.config.ts            # Angular application configuration
+│   │   ├── components/
+│   │   │   ├── navbar/              # Sticky blur navigation & active link signal
+│   │   │   ├── hero/                # Hero banner, headshot card & animated counters
+│   │   │   ├── problems-solved/     # Problem cards showcase & signal tab filters
+│   │   │   ├── skills/              # Core skills & architecture patterns grid
+│   │   │   ├── achievements/        # Award cards with direct verification links
+│   │   │   ├── experience/          # Professional experience & degree timeline
+│   │   │   ├── contact/             # Email copy pill, phone call & LinkedIn links
+│   │   │   └── footer/              # Clean footer information
+│   │   └── services/
+│   │       ├── theme.service.ts     # Signal-based Day/Night theme switcher
+│   │       └── toast.service.ts     # Signal-based toast notification service
+│   └── environments/
+│       ├── environment.ts           # Development environment configuration
+│       └── environment.prod.ts      # Production environment configuration
+├── .env                             # Active environment variable file
+└── .env.example                     # Environment template file
 ```
 
 ---
@@ -115,6 +151,9 @@ src/
 - **Languages & Frameworks**: C#, ASP.NET Core, Web API, ASP.NET Core MVC, EF Core, Dapper, NestJS, Next.js, Python (FastAPI)
 - **Architectural Patterns**: Clean Architecture, N-Layer, SOLID Principles, CQRS, Repository Pattern
 - **Cloud & Databases**: Azure (App Service, SQL DB, Blob Storage), AWS (EC2, S3, SES), SQL Server, PostgreSQL, MySQL
+
+### DevOps & CI/CD
+- **Automation & Deployment**: GitHub Actions (`deploy.yml`), GitHub Pages, Node.js 20, npm caching, OIDC Token authentication
 
 ---
 
@@ -152,19 +191,6 @@ src/
    npx ng build
    ```
    Build artifacts will be generated in the `dist/portfolio-ng/browser` directory.
-
----
-
-## 🤖 GitHub Actions CI/CD Pipeline
-
-The project includes an automated **GitHub Actions Workflow** file at [`.github/workflows/deploy.yml`](file:///c:/prince_chand/portfolio-01/.github/workflows/deploy.yml).
-
-Whenever changes are pushed to the `main` branch, GitHub Actions automatically:
-1. Checks out the code.
-2. Sets up Node.js v20.
-3. Installs dependencies (`npm ci`).
-4. Compiles the Angular production build (`npm run build -- --base-href /princechand-portfolio/`).
-5. Deploys the built application automatically to **GitHub Pages**.
 
 ---
 
