@@ -21,6 +21,11 @@ import { ThemeService } from '../../services/theme.service';
           <li><a href="#achievements" (click)="onNavClick($event, 'achievements')" class="nav-link">Achievements</a></li>
           <li><a href="#experience" (click)="onNavClick($event, 'experience')" class="nav-link">Experience</a></li>
           <li><a href="#contact" (click)="onNavClick($event, 'contact')" class="nav-link">Contact</a></li>
+          <li class="mobile-cta-item">
+            <a href="#contact" (click)="onNavClick($event, 'contact')" class="btn btn-primary mobile-drawer-btn">
+              <i class="fa-solid fa-paper-plane"></i> Get in Touch
+            </a>
+          </li>
         </ul>
 
         <div class="nav-actions">
