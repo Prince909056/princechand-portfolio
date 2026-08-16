@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, ElementRef, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-hero',
@@ -19,7 +20,7 @@ import { CommonModule } from '@angular/common';
             </h1>
 
             <p class="hero-subtitle">
-              Results-driven Software Engineer with <strong>3.8+ years</strong> of experience building scalable backend architectures, high-performance RESTful APIs, clean code structures, and cutting-edge AI integrations.
+              Results-driven Software Engineer with <strong>{{ yearsOfExperience }} years</strong> of experience building scalable backend architectures, high-performance RESTful APIs, clean code structures, and cutting-edge AI integrations.
             </p>
 
             <div class="hero-cta">
@@ -53,10 +54,11 @@ import { CommonModule } from '@angular/common';
             <div class="profile-card-wrapper">
               <div class="profile-card">
                 <img src="assets/profile.jpg" alt="Prince Chand Photo" class="profile-img">
-                <div class="profile-floating-badge">
+                <a [href]="starOfTheMonthLink" target="_blank" rel="noopener noreferrer" class="profile-floating-badge" style="text-decoration: none; color: inherit;">
                   <i class="fa-solid fa-award" style="color: var(--accent-amber)"></i>
                   <span>Star of the Month Engineer</span>
-                </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 0.25rem;"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -67,6 +69,8 @@ import { CommonModule } from '@angular/common';
 })
 export class HeroComponent implements AfterViewInit {
   private el = inject(ElementRef);
+  readonly yearsOfExperience = environment.yearsOfExperience;
+  readonly starOfTheMonthLink = environment.starOfTheMonthLink;
 
   ngAfterViewInit(): void {
     this.initCounterObserver();

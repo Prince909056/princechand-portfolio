@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ToastService } from '../../services/toast.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -19,18 +20,19 @@ import { ToastService } from '../../services/toast.service';
           <div class="contact-methods">
             <button class="contact-pill" (click)="copyEmail()">
               <i class="fa-solid fa-envelope"></i>
-              <span>prince.chand.dev&#64;gmail.com</span>
+              <span>{{ email }}</span>
               <i class="fa-solid fa-copy" style="font-size: 0.8rem; margin-left: 0.25rem;"></i>
             </button>
 
-            <a href="tel:+919888725336" class="contact-pill">
+            <a [href]="'tel:' + phone" class="contact-pill">
               <i class="fa-solid fa-phone"></i>
-              <span>(+91) 9888725336</span>
+              <span>{{ phone }}</span>
             </a>
 
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-pill">
+            <a [href]="linkedInUrl" target="_blank" rel="noopener noreferrer" class="contact-pill">
               <i class="fa-brands fa-linkedin"></i>
               <span>LinkedIn Profile</span>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem; margin-left: 0.25rem;"></i>
             </a>
           </div>
         </div>
@@ -40,7 +42,9 @@ import { ToastService } from '../../services/toast.service';
 })
 export class ContactComponent {
   private toastService = inject(ToastService);
-  readonly email = 'prince.chand.dev@gmail.com';
+  readonly email = environment.emailAddress;
+  readonly phone = environment.phoneNumber;
+  readonly linkedInUrl = environment.linkedInUrl;
 
   copyEmail(): void {
     navigator.clipboard.writeText(this.email).then(() => {
@@ -50,3 +54,4 @@ export class ContactComponent {
     });
   }
 }
+
