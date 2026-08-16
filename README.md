@@ -5,26 +5,27 @@
 </p>
 
 <p align="center">
-  <strong>Results-driven Software Engineer with 3.8+ years of experience in ASP.NET Core, C#, Web API, Entity Framework Core, Angular, NestJS, and Cutting-Edge AI Integrations.</strong>
+  <strong>Results-driven Software Engineer with 3.8 years of experience in ASP.NET Core, C#, Web API, Entity Framework Core, Angular, NestJS, and Cutting-Edge AI Integrations.</strong>
 </p>
 
 <p align="center">
   <a href="#-key-features">Key Features</a> •
   <a href="#-engineering-problems-solved">Problems Solved</a> •
+  <a href="#-environment-configuration">Environment Config</a> •
   <a href="#-angular-architecture">Angular Architecture</a> •
-  <a href="#-getting-started">Getting Started</a> •
-  <a href="#-tech-stack">Tech Stack</a>
+  <a href="#-getting-started">Getting Started</a>
 </p>
 
 ---
 
 ## 🚀 Overview
 
-This repository contains the official, high-performance **Angular Portfolio Application** for **Prince Chand**. Built with modern **Angular 20 Standalone Components**, **Angular Signals**, and modern **Control Flow Syntax (`@for`, `@if`)**, the application showcases real-world engineering impact, complex problem-solving outcomes, and system architecture metrics.
+This repository contains the official, high-performance **Angular Portfolio Application** for **Prince Chand**. Built with modern **Angular 20 Standalone Components**, **Angular Signals**, and **Control Flow Syntax (`@for`, `@if`)**, the application showcases real-world engineering impact, complex problem-solving outcomes, and system architecture metrics.
 
 ### Highlights:
 - 💡 **Outcome-Driven Portfolio**: Focuses on real-world engineering problems solved and quantitative technical impact rather than basic project listing.
 - 🌙 **Day/Night Theme Switcher**: Defaults to **Dark Mode** (`#090d16`) with seamless reactive toggling to Light Mode and persistent state.
+- ⚙️ **Configurable Environments**: All social profile URLs, total experience metrics, and award verification links are dynamically bound via `.env` / `environment.ts` configuration.
 - ⚡ **Modern Angular 20**: Utilizes Standalone Component architecture and Signal-based state management (`ThemeService`, `ToastService`).
 - 🎨 **Visual Aesthetics**: Designed with glassmorphic cards, custom gradient glows, animated metric counters, responsive tab filtering, and custom typography (`Outfit` & `Inter`).
 
@@ -36,7 +37,7 @@ This repository contains the official, high-performance **Angular Portfolio Appl
 - **Reactive Theme System**: Signal-driven Day & Night theme switch that updates DOM attributes (`data-theme`) instantly while preserving preferences in `localStorage`.
 - **Animated Metrics Strip**: Dynamic counter animations showcasing quantitative results (e.g. *90% Manual Effort Cut*, *80% Faster AI Verification*, *700+ Employee Scale*).
 - **Clipboard & Toast Feedback**: Integrated `ToastService` triggering smooth toast notifications when copying email or contact details.
-- **100% Mobile Responsive**: Mobile drawer navigation menu and optimized responsive flexbox/grid layouts.
+- **Direct Award & Profile Verification**: Clickable verification badges linking to verified LinkedIn activities and Udemy certificate credentials.
 
 ---
 
@@ -53,27 +54,51 @@ This repository contains the official, high-performance **Angular Portfolio Appl
 
 ---
 
+## ⚙️ Environment Configuration
+
+The application supports configurable environment properties via `.env` / `.env.example` and Angular environment files ([`src/environments/environment.ts`](file:///c:/prince_chand/portfolio-01/src/environments/environment.ts) and [`src/environments/environment.prod.ts`](file:///c:/prince_chand/portfolio-01/src/environments/environment.prod.ts)):
+
+```env
+# Total Years of Professional Experience
+YEARS_OF_EXPERIENCE=3.8
+
+# Achievements & Awards Verification Links
+STAR_OF_MONTH_LINK=https://www.linkedin.com/posts/anviamsolutions_anviamrockstars-aboveandbeyond-teamanviam-activity-7345398424978001921-TGYZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADI--QUBFqx3OIYgf8sBrrYLaIE75o5D_ik
+RISING_STAR_LINK=https://www.linkedin.com/feed/update/urn:li:activity:7154809121123274752/
+CLEAN_CODE_CERT_LINK=https://www.udemy.com/certificate/UC-b4255959-f5c5-4308-9a21-88a8ff4ac0f4/
+
+# Social & Contact Links
+LINKEDIN_PROFILE_URL=https://www.linkedin.com/in/prince-chand-1993941b6/
+EMAIL_ADDRESS=prince.chand.dev@gmail.com
+PHONE_NUMBER=(+91) 9888725336
+```
+
+---
+
 ## 🏛️ Angular Architecture
 
 The application is structured into modular Standalone Components and reactive Services:
 
 ```text
-src/app/
-├── app.component.ts                 # Root shell component & toast container
-├── app.config.ts                    # Angular application configuration
-├── app.routes.ts                    # Application route definitions
-├── components/
-│   ├── navbar/                      # Sticky blur navigation, logo & theme toggle
-│   ├── hero/                        # Hero banner, headshot card & animated counters
-│   ├── problems-solved/             # Problem cards showcase & signal tab filters
-│   ├── skills/                      # Core skills & architecture patterns grid
-│   ├── achievements/                # Awards (Star of the Month, Rising Star, Clean Code)
-│   ├── experience/                  # Professional experience & degree timeline
-│   ├── contact/                     # Email copy pill, phone call & social links
-│   └── footer/                      # Clean footer information
-└── services/
-    ├── theme.service.ts             # Signal-based Day/Night theme switcher & storage
-    └── toast.service.ts             # Signal-based toast notification service
+src/
+├── app/
+│   ├── app.component.ts             # Root shell component & toast container
+│   ├── app.config.ts                # Angular application configuration
+│   ├── components/
+│   │   ├── navbar/                  # Sticky blur navigation, logo & theme toggle
+│   │   ├── hero/                    # Hero banner, headshot card & animated counters
+│   │   ├── problems-solved/         # Problem cards showcase & signal tab filters
+│   │   ├── skills/                  # Core skills & architecture patterns grid
+│   │   ├── achievements/            # Award cards with direct verification links
+│   │   ├── experience/              # Professional experience (3.8 Years) & degree timeline
+│   │   ├── contact/                 # Email copy pill, phone call & LinkedIn links
+│   │   └── footer/                  # Clean footer information
+│   └── services/
+│       ├── theme.service.ts         # Signal-based Day/Night theme switcher & storage
+│       └── toast.service.ts         # Signal-based toast notification service
+└── environments/
+    ├── environment.ts               # Development environment configuration
+    └── environment.prod.ts          # Production environment configuration (fileReplacements mapping)
 ```
 
 ---
@@ -82,7 +107,7 @@ src/app/
 
 ### Frontend & Architecture
 - **Framework**: Angular 20 (Standalone Components, Signals, Control Flow Syntax)
-- **Styling**: Vanilla CSS3 (Custom Design System, CSS Variables, Glassmorphism)
+- **Styling**: Vanilla CSS3 (Custom Design System, CSS Variables, Glassmorphic Cards)
 - **Icons & Fonts**: FontAwesome 6, Google Fonts (`Outfit` & `Inter`)
 
 ### Backend & Cloud Expertise
@@ -102,7 +127,7 @@ src/app/
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/prince-chand/portfolio.git
+   git clone https://github.com/Prince909056/princechand-portfolio.git
    cd portfolio-01
    ```
 
@@ -131,14 +156,15 @@ src/app/
 
 ## 🏆 Honors & Recognition
 
-- 🌟 **Star of the Month** (June 2025) – Anviam Solution Pvt Ltd
-- ⭐ **Rising Star Award** (August 2023 & January 2024) – Anviam Solution Pvt Ltd
-- 📜 **"Clean Code" Certification** (May 2025) – Udemy
+- 🌟 [**Star of the Month** (June 2025)](https://www.linkedin.com/posts/anviamsolutions_anviamrockstars-aboveandbeyond-teamanviam-activity-7345398424978001921-TGYZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADI--QUBFqx3OIYgf8sBrrYLaIE75o5D_ik) – Anviam Solution Pvt Ltd
+- ⭐ [**Rising Star Award** (August 2023 & January 2024)](https://www.linkedin.com/feed/update/urn:li:activity:7154809121123274752/) – Anviam Solution Pvt Ltd
+- 📜 [**"Clean Code" Certification** (May 2025)](https://www.udemy.com/certificate/UC-b4255959-f5c5-4308-9a21-88a8ff4ac0f4/) – Udemy
 
 ---
 
 ## 📬 Contact & Connect
 
+- **LinkedIn**: [Prince Chand LinkedIn Profile](https://www.linkedin.com/in/prince-chand-1993941b6/)
 - **Email**: [prince.chand.dev@gmail.com](mailto:prince.chand.dev@gmail.com)
 - **Phone**: (+91) 9888725336
 - **Location**: Punjab, India
