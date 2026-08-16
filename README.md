@@ -33,6 +33,7 @@ This repository contains the official, high-performance **Angular Portfolio Appl
 
 ## ✨ Key Features
 
+- **Active Section Highlighting**: Signal-driven active navigation tracking in `NavbarComponent` that highlights menu headings dynamically on click and scroll position.
 - **Interactive Category Filtering**: Filter technical solutions seamlessly between `All`, `AI & Voice Systems`, `Performance & DB`, `Biotech & Hardware`, and `Enterprise Payroll`.
 - **Reactive Theme System**: Signal-driven Day & Night theme switch that updates DOM attributes (`data-theme`) instantly while preserving preferences in `localStorage`.
 - **Animated Metrics Strip**: Dynamic counter animations showcasing quantitative results (e.g. *90% Manual Effort Cut*, *80% Faster AI Verification*, *700+ Employee Scale*).
