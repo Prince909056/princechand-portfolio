@@ -1,534 +1,614 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prince Chand | .NET & AI Integration Engineer</title>
-  <meta name="description" content="Portfolio of Prince Chand, a Results-driven .NET & AI Integration Engineer with 3.8+ years of experience solving complex software challenges using ASP.NET Core, C#, Azure, AWS, and OpenAI APIs.">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="assets/profile.jpg" type="image/jpeg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prince Chand | .NET & AI Integration Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Prince Chand, a Results-driven .NET & AI Integration Engineer with 3.8+ years of experience solving complex software challenges using ASP.NET Core, C#, Azure, AWS, and OpenAI APIs."
+    />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/profile.jpg" type="image/jpeg" />
 
-  <!-- Floating Navigation Bar -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-container">
-      <a href="#hero" class="brand-logo">
-        <img src="assets/profile.jpg" alt="Prince Chand Profile" class="brand-avatar">
-        <span>Prince<span class="gradient-text">.Chand</span></span>
-      </a>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#hero" class="nav-link active">Home</a></li>
-        <li><a href="#problems" class="nav-link">Problems Solved</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#achievements" class="nav-link">Achievements</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-      <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Light/Dark Theme">
-          <i class="fa-solid fa-moon"></i>
-          <i class="fa-solid fa-sun"></i>
-        </button>
-        <a href="#contact" class="btn btn-primary nav-cta">Get in Touch</a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Floating Navigation Bar -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="brand-logo">
+          <img src="assets/profile.jpg" alt="Prince Chand Profile" class="brand-avatar" />
+          <span>Prince<span class="gradient-text">.Chand</span></span>
+        </a>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="status-dot"></span> Available for Engineering Opportunities
-          </div>
-          
-          <h1 class="hero-title">
-            Solving Complex Problems with <span class="gradient-text">.NET & AI Integration</span>
-          </h1>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#problems" class="nav-link">Problems Solved</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
 
-          <p class="hero-subtitle">
-            Results-driven Software Engineer with <strong>3.8+ years</strong> of experience building scalable backend architectures, high-performance RESTful APIs, clean code structures, and cutting-edge AI integrations.
-          </p>
-
-          <div class="hero-cta">
-            <a href="#problems" class="btn btn-primary">
-              <i class="fa-solid fa-lightbulb"></i> View Problems Solved
-            </a>
-            <a href="#contact" class="btn btn-secondary">
-              <i class="fa-solid fa-envelope"></i> Contact Me
-            </a>
-          </div>
-
-          <!-- Impact Metrics Strip -->
-          <div class="hero-metrics">
-            <div class="metric-item">
-              <span class="metric-value" data-target="90">0%</span>
-              <span class="metric-label">Manual Effort Automation</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-value" data-target="80">0%</span>
-              <span class="metric-label">Faster Verification Speed</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-value" data-target="700">0+</span>
-              <span class="metric-label">Employees Payroll Scaled</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Profile Photo -->
-        <div class="hero-image-col">
-          <div class="profile-card-wrapper">
-            <div class="profile-card">
-              <img src="assets/profile.jpg" alt="Prince Chand Photo" class="profile-img">
-              <div class="profile-floating-badge">
-                <i class="fa-solid fa-award" style="color: var(--accent-amber)"></i>
-                <span>Star of the Month Engineer</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Problems Solved Section (Core Showcase) -->
-  <section class="section" id="problems">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle">Engineering Impact</span>
-        <h2 class="section-title">Key Technical Problems I Have Solved</h2>
-        <p class="section-description">
-          A showcase of real-world operational bottlenecks, hardware challenges, and manual process complexities resolved through modern backend architecture and AI intelligence.
-        </p>
-      </div>
-
-      <!-- Filter Category Tabs -->
-      <div class="filter-container">
-        <button class="filter-pill active" data-filter="all">All Solutions</button>
-        <button class="filter-pill" data-filter="ai">AI & Voice Systems</button>
-        <button class="filter-pill" data-filter="perf">Performance & DB</button>
-        <button class="filter-pill" data-filter="biotech">Biotech & Hardware</button>
-        <button class="filter-pill" data-filter="enterprise">Enterprise Payroll</button>
-      </div>
-
-      <!-- Problems Grid -->
-      <div class="problems-grid">
-
-        <!-- Problem 1: Real-Time AI Voice Communication -->
-        <div class="problem-card" data-category="ai">
-          <div>
-            <div class="problem-header">
-              <div class="problem-icon-wrapper">
-                <i class="fa-solid fa-microphone-lines"></i>
-              </div>
-              <span class="impact-badge">70-80% Less Scheduling Work</span>
-            </div>
-
-            <h3 class="problem-title">Latency & Overhead in Provider-Patient Healthcare Communication</h3>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">The Challenge</span>
-              <p class="problem-text">Traditional appointment booking created friction and delays in consultations, burdening staff with repetitive manual scheduling tasks.</p>
-            </div>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">Engineered Solution</span>
-              <p class="solution-text">Architected full-stack modules integrated with ElevenLabs AI APIs for real-time voice-to-voice dialogue between patients and doctors, backed by secure OAuth 2.0 and Stripe payment processing.</p>
-            </div>
-          </div>
-
-          <div class="tech-pills">
-            <span class="tech-pill">ASP.NET Core</span>
-            <span class="tech-pill">ElevenLabs AI</span>
-            <span class="tech-pill">Angular 19</span>
-            <span class="tech-pill">Stripe</span>
-            <span class="tech-pill">SQL Server</span>
-          </div>
-        </div>
-
-        <!-- Problem 2: Real Estate AI Verification & RAG Search -->
-        <div class="problem-card" data-category="ai">
-          <div>
-            <div class="problem-header">
-              <div class="problem-icon-wrapper">
-                <i class="fa-solid fa-brain"></i>
-              </div>
-              <span class="impact-badge">80% Faster Verification</span>
-            </div>
-
-            <h3 class="problem-title">Manual Property Content Creation & Slow Listing Inspection</h3>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">The Challenge</span>
-              <p class="problem-text">Manual property verification took days, while traditional listing search suffered low relevance accuracy.</p>
-            </div>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">Engineered Solution</span>
-              <p class="solution-text">Built an OpenAI GPT-4o + RAG query engine achieving ~90% accuracy, combined with automated AI property image/video verification workflows and OAuth authentication.</p>
-            </div>
-          </div>
-
-          <div class="tech-pills">
-            <span class="tech-pill">OpenAI GPT-4o</span>
-            <span class="tech-pill">RAG Architecture</span>
-            <span class="tech-pill">NestJS</span>
-            <span class="tech-pill">Python FastAPI</span>
-            <span class="tech-pill">AWS EC2/S3</span>
-          </div>
-        </div>
-
-        <!-- Problem 3: Restaurant POS Menu Sync & Rendering Optimization -->
-        <div class="problem-card" data-category="perf">
-          <div>
-            <div class="problem-header">
-              <div class="problem-icon-wrapper">
-                <i class="fa-solid fa-utensils"></i>
-              </div>
-              <span class="impact-badge">90% Menu Effort Cut</span>
-            </div>
-
-            <h3 class="problem-title">Manual POS Menu Synchronization & Slow Website Rendering</h3>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">The Challenge</span>
-              <p class="problem-text">Multi-location restaurants spent massive manual hours updating digital menus across platforms, leading to data drift and slow page loads.</p>
-            </div>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">Engineered Solution</span>
-              <p class="solution-text">Integrated Toast POS API for automated real-time menu synchronization and refactored SQL stored procedures/Dapper queries to offload unnecessary frontend rendering.</p>
-            </div>
-          </div>
-
-          <div class="tech-pills">
-            <span class="tech-pill">ASP.NET Core API</span>
-            <span class="tech-pill">Toast POS Integration</span>
-            <span class="tech-pill">C#</span>
-            <span class="tech-pill">Dapper</span>
-            <span class="tech-pill">SQL Optimization</span>
-          </div>
-        </div>
-
-        <!-- Problem 4: Biotech Hardware Interfacing & Disease Identification -->
-        <div class="problem-card" data-category="biotech">
-          <div>
-            <div class="problem-header">
-              <div class="problem-icon-wrapper">
-                <i class="fa-solid fa-dna"></i>
-              </div>
-              <span class="impact-badge">Hardware-Cloud Streamlined</span>
-            </div>
-
-            <h3 class="problem-title">Bridging Lab Hardware Devices with Web APIs for Disease Diagnostics</h3>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">The Challenge</span>
-              <p class="problem-text">Translating scientist-defined business logic and raw hardware signals into reliable disease identification workflows was prone to communication bottlenecks.</p>
-            </div>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">Engineered Solution</span>
-              <p class="solution-text">Developed Web API interfacing with Laser and DAQ-205 laboratory hardware devices, executing complex protein sequence analysis algorithms with high throughput.</p>
-            </div>
-          </div>
-
-          <div class="tech-pills">
-            <span class="tech-pill">ASP.NET Core Web API</span>
-            <span class="tech-pill">Angular 17</span>
-            <span class="tech-pill">Hardware DAQ-205</span>
-            <span class="tech-pill">Protein Analysis</span>
-            <span class="tech-pill">Azure</span>
-          </div>
-        </div>
-
-        <!-- Problem 5: Multi-User Payroll & Accounting Automation -->
-        <div class="problem-card" data-category="enterprise">
-          <div>
-            <div class="problem-header">
-              <div class="problem-icon-wrapper">
-                <i class="fa-solid fa-calculator"></i>
-              </div>
-              <span class="impact-badge">60% Manual Payroll Cut</span>
-            </div>
-
-            <h3 class="problem-title">Complex Manual Salary Processing & Financial Discrepancies</h3>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">The Challenge</span>
-              <p class="problem-text">Calculating monthly salaries, tax withholdings, and trial balances for 700+ staff across departments was manual and error-prone.</p>
-            </div>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">Engineered Solution</span>
-              <p class="solution-text">Architected a 1-click salary processing system with single/double-entry financial modules generating instant Balance Sheet, Trial Balance, and department reports.</p>
-            </div>
-          </div>
-
-          <div class="tech-pills">
-            <span class="tech-pill">ASP.NET Core MVC</span>
-            <span class="tech-pill">EF Core</span>
-            <span class="tech-pill">LINQ</span>
-            <span class="tech-pill">MySQL</span>
-            <span class="tech-pill">Bootstrap</span>
-          </div>
-        </div>
-
-        <!-- Problem 6: APNs Certificate Inspection & Validation -->
-        <div class="problem-card" data-category="perf">
-          <div>
-            <div class="problem-header">
-              <div class="problem-icon-wrapper">
-                <i class="fa-solid fa-shield-halved"></i>
-              </div>
-              <span class="impact-badge">Zero Config Errors</span>
-            </div>
-
-            <h3 class="problem-title">APNs Push Notification Certificate Configuration Failures</h3>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">The Challenge</span>
-              <p class="problem-text">Parsing and validating Apple Push Notification (.p8, .p12, .pem) certificate metadata manually led to frequent push delivery downtime.</p>
-            </div>
-
-            <div class="problem-detail-block">
-              <span class="detail-label">Engineered Solution</span>
-              <p class="solution-text">Engineered a dedicated C# backend utility that automatically reads, parses, validates expiration, and extracts metadata from raw Apple certificate files.</p>
-            </div>
-          </div>
-
-          <div class="tech-pills">
-            <span class="tech-pill">C#</span>
-            <span class="tech-pill">ASP.NET Core API</span>
-            <span class="tech-pill">Apple Certificates</span>
-            <span class="tech-pill">Security Parsing</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Technical Expertise & Architecture -->
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle">Technical Proficiency</span>
-        <h2 class="section-title">Core Skills & Engineering Stack</h2>
-        <p class="section-description">
-          Built on solid object-oriented fundamentals, clean architecture principles, and modern cloud ecosystem tools.
-        </p>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3 class="skill-card-title">
-            <i class="fa-solid fa-code"></i> Languages & Frameworks
-          </h3>
-          <div class="skill-tags">
-            <span class="skill-badge">C#</span>
-            <span class="skill-badge">ASP.NET Core</span>
-            <span class="skill-badge">ASP.NET Web API</span>
-            <span class="skill-badge">ASP.NET Core MVC</span>
-            <span class="skill-badge">Angular (17-19)</span>
-            <span class="skill-badge">NestJS</span>
-            <span class="skill-badge">Next.js</span>
-            <span class="skill-badge">Python (FastAPI)</span>
-            <span class="skill-badge">SQL & LINQ</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <h3 class="skill-card-title">
-            <i class="fa-solid fa-cubes"></i> Architecture & Patterns
-          </h3>
-          <div class="skill-tags">
-            <span class="skill-badge">Clean Architecture</span>
-            <span class="skill-badge">N-Layer Architecture</span>
-            <span class="skill-badge">SOLID Principles</span>
-            <span class="skill-badge">Repository Pattern</span>
-            <span class="skill-badge">Unit of Work</span>
-            <span class="skill-badge">CQRS</span>
-            <span class="skill-badge">RESTful API Design</span>
-            <span class="skill-badge">DRY Principles</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <h3 class="skill-card-title">
-            <i class="fa-solid fa-robot"></i> AI & Integrations
-          </h3>
-          <div class="skill-tags">
-            <span class="skill-badge">OpenAI GPT-4o</span>
-            <span class="skill-badge">RAG Systems</span>
-            <span class="skill-badge">ElevenLabs AI (Voice)</span>
-            <span class="skill-badge">OAuth 2.0 / JWT</span>
-            <span class="skill-badge">Stripe Payment Gateway</span>
-            <span class="skill-badge">Toast POS API</span>
-            <span class="skill-badge">Hardware DAQ Devices</span>
-          </div>
-        </div>
-
-        <div class="skill-card">
-          <h3 class="skill-card-title">
-            <i class="fa-solid fa-cloud"></i> Cloud, DB & DevOps
-          </h3>
-          <div class="skill-tags">
-            <span class="skill-badge">Azure App Service</span>
-            <span class="skill-badge">Azure SQL Database</span>
-            <span class="skill-badge">AWS (EC2, S3, SES)</span>
-            <span class="skill-badge">SQL Server</span>
-            <span class="skill-badge">PostgreSQL</span>
-            <span class="skill-badge">Dapper & EF Core</span>
-            <span class="skill-badge">Azure DevOps & Git</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Achievements Section -->
-  <section class="section" id="achievements">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle">Recognition & Growth</span>
-        <h2 class="section-title">Honors & Certifications</h2>
-      </div>
-
-      <div class="achievements-grid">
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fa-solid fa-trophy"></i>
-          </div>
-          <div>
-            <h3 class="achievement-title">Star of the Month</h3>
-            <div class="achievement-date">June 2025 • Anviam Solution Pvt Ltd</div>
-            <p class="achievement-desc">Awarded for consistently exceeding performance expectations, solving complex engineering bottlenecks, and delivering top-tier solutions.</p>
-          </div>
-        </div>
-
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div>
-            <h3 class="achievement-title">Rising Star Award</h3>
-            <div class="achievement-date">Aug 2023 & Jan 2024 • Anviam Solution Pvt Ltd</div>
-            <p class="achievement-desc">Recognized twice for outstanding technical performance, rapid problem resolution, and team dedication.</p>
-          </div>
-        </div>
-
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fa-solid fa-certificate"></i>
-          </div>
-          <div>
-            <h3 class="achievement-title">"Clean Code" Certification</h3>
-            <div class="achievement-date">May 2025 • Udemy</div>
-            <p class="achievement-desc">Mastered code refactoring, maintainability, architectural design patterns, and writing production-ready robust code.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience & Education -->
-  <section class="section" id="experience">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-subtitle">Career Journey</span>
-        <h2 class="section-title">Experience & Education</h2>
-      </div>
-
-      <div class="timeline-card">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <h3 class="timeline-role">Software Engineer</h3>
-          <div class="timeline-company">Anviam Solution Pvt Ltd</div>
-          <div class="timeline-period"><i class="fa-regular fa-calendar"></i> Jan 2023 – Present (3.8+ Years)</div>
-          <p class="problem-text">
-            Engineered enterprise backend services, scalable Web APIs, AI voice/text workflows, hardware integration modules, and cloud databases using ASP.NET Core, C#, SQL Server, Azure, NestJS, and Angular.
-          </p>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <h3 class="timeline-role">B.Tech in Computer Science & Engineering</h3>
-          <div class="timeline-company">I.K. Gujral Punjab Technical University</div>
-          <div class="timeline-period"><i class="fa-regular fa-calendar"></i> 2019 – 2023 • CGPA: 8.32 / 10</div>
-          <p class="problem-text">
-            Graduated with Distinction in Computer Science, focusing on Software Architecture, Database Management Systems, Data Structures, and Web Technologies.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="contact-card">
-        <span class="section-subtitle">Let's Connect</span>
-        <h2 class="section-title">Have a Problem to Solve?</h2>
-        <p class="section-description">
-          Whether you need to scale your backend architecture, optimize database query performance, or integrate AI into your application—I'm ready to help.
-        </p>
-
-        <div class="contact-methods">
-          <button class="contact-pill" id="copyEmailBtn" data-email="prince.chand.dev@gmail.com">
-            <i class="fa-solid fa-envelope"></i>
-            <span id="emailText">prince.chand.dev@gmail.com</span>
-            <i class="fa-solid fa-copy" style="font-size: 0.8rem; margin-left: 0.25rem;"></i>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle Light/Dark Theme">
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
           </button>
-
-          <a href="tel:+919888725336" class="contact-pill">
-            <i class="fa-solid fa-phone"></i>
-            <span>(+91) 9888725336</span>
-          </a>
-
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-pill">
-            <i class="fa-brands fa-linkedin"></i>
-            <span>LinkedIn Profile</span>
-          </a>
+          <a href="#contact" class="btn btn-primary nav-cta">Get in Touch</a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
       </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="status-dot"></span> Available for Engineering Opportunities
+            </div>
+
+            <h1 class="hero-title">
+              Solving Complex Problems with <span class="gradient-text">.NET & AI Integration</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Results-driven Software Engineer with <strong>3.8+ years</strong> of experience
+              building scalable backend architectures, high-performance RESTful APIs, clean code
+              structures, and cutting-edge AI integrations.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#problems" class="btn btn-primary">
+                <i class="fa-solid fa-lightbulb"></i> View Problems Solved
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fa-solid fa-envelope"></i> Contact Me
+              </a>
+            </div>
+
+            <!-- Impact Metrics Strip -->
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <span class="metric-value" data-target="90">0%</span>
+                <span class="metric-label">Manual Effort Automation</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value" data-target="80">0%</span>
+                <span class="metric-label">Faster Verification Speed</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value" data-target="700">0+</span>
+                <span class="metric-label">Employees Payroll Scaled</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile Photo -->
+          <div class="hero-image-col">
+            <div class="profile-card-wrapper">
+              <div class="profile-card">
+                <img src="assets/profile.jpg" alt="Prince Chand Photo" class="profile-img" />
+                <div class="profile-floating-badge">
+                  <i class="fa-solid fa-award" style="color: var(--accent-amber)"></i>
+                  <span>Star of the Month Engineer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problems Solved Section (Core Showcase) -->
+    <section class="section" id="problems">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Engineering Impact</span>
+          <h2 class="section-title">Key Technical Problems I Have Solved</h2>
+          <p class="section-description">
+            A showcase of real-world operational bottlenecks, hardware challenges, and manual
+            process complexities resolved through modern backend architecture and AI intelligence.
+          </p>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="filter-container">
+          <button class="filter-pill active" data-filter="all">All Solutions</button>
+          <button class="filter-pill" data-filter="ai">AI & Voice Systems</button>
+          <button class="filter-pill" data-filter="perf">Performance & DB</button>
+          <button class="filter-pill" data-filter="biotech">Biotech & Hardware</button>
+          <button class="filter-pill" data-filter="enterprise">Enterprise Payroll</button>
+        </div>
+
+        <!-- Problems Grid -->
+        <div class="problems-grid">
+          <!-- Problem 1: Real-Time AI Voice Communication -->
+          <div class="problem-card" data-category="ai">
+            <div>
+              <div class="problem-header">
+                <div class="problem-icon-wrapper">
+                  <i class="fa-solid fa-microphone-lines"></i>
+                </div>
+                <span class="impact-badge">70-80% Less Scheduling Work</span>
+              </div>
+
+              <h3 class="problem-title">
+                Latency & Overhead in Provider-Patient Healthcare Communication
+              </h3>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">The Challenge</span>
+                <p class="problem-text">
+                  Traditional appointment booking created friction and delays in consultations,
+                  burdening staff with repetitive manual scheduling tasks.
+                </p>
+              </div>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">Engineered Solution</span>
+                <p class="solution-text">
+                  Architected full-stack modules integrated with ElevenLabs AI APIs for real-time
+                  voice-to-voice dialogue between patients and doctors, backed by secure OAuth 2.0
+                  and Stripe payment processing.
+                </p>
+              </div>
+            </div>
+
+            <div class="tech-pills">
+              <span class="tech-pill">ASP.NET Core</span>
+              <span class="tech-pill">ElevenLabs AI</span>
+              <span class="tech-pill">Angular 19</span>
+              <span class="tech-pill">Stripe</span>
+              <span class="tech-pill">SQL Server</span>
+            </div>
+          </div>
+
+          <!-- Problem 2: Real Estate AI Verification & RAG Search -->
+          <div class="problem-card" data-category="ai">
+            <div>
+              <div class="problem-header">
+                <div class="problem-icon-wrapper">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <span class="impact-badge">80% Faster Verification</span>
+              </div>
+
+              <h3 class="problem-title">
+                Manual Property Content Creation & Slow Listing Inspection
+              </h3>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">The Challenge</span>
+                <p class="problem-text">
+                  Manual property verification took days, while traditional listing search suffered
+                  low relevance accuracy.
+                </p>
+              </div>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">Engineered Solution</span>
+                <p class="solution-text">
+                  Built an OpenAI GPT-4o + RAG query engine achieving ~90% accuracy, combined with
+                  automated AI property image/video verification workflows and OAuth authentication.
+                </p>
+              </div>
+            </div>
+
+            <div class="tech-pills">
+              <span class="tech-pill">OpenAI GPT-4o</span>
+              <span class="tech-pill">RAG Architecture</span>
+              <span class="tech-pill">NestJS</span>
+              <span class="tech-pill">Python FastAPI</span>
+              <span class="tech-pill">AWS EC2/S3</span>
+            </div>
+          </div>
+
+          <!-- Problem 3: Restaurant POS Menu Sync & Rendering Optimization -->
+          <div class="problem-card" data-category="perf">
+            <div>
+              <div class="problem-header">
+                <div class="problem-icon-wrapper">
+                  <i class="fa-solid fa-utensils"></i>
+                </div>
+                <span class="impact-badge">90% Menu Effort Cut</span>
+              </div>
+
+              <h3 class="problem-title">
+                Manual POS Menu Synchronization & Slow Website Rendering
+              </h3>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">The Challenge</span>
+                <p class="problem-text">
+                  Multi-location restaurants spent massive manual hours updating digital menus
+                  across platforms, leading to data drift and slow page loads.
+                </p>
+              </div>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">Engineered Solution</span>
+                <p class="solution-text">
+                  Integrated Toast POS API for automated real-time menu synchronization and
+                  refactored SQL stored procedures/Dapper queries to offload unnecessary frontend
+                  rendering.
+                </p>
+              </div>
+            </div>
+
+            <div class="tech-pills">
+              <span class="tech-pill">ASP.NET Core API</span>
+              <span class="tech-pill">Toast POS Integration</span>
+              <span class="tech-pill">C#</span>
+              <span class="tech-pill">Dapper</span>
+              <span class="tech-pill">SQL Optimization</span>
+            </div>
+          </div>
+
+          <!-- Problem 4: Biotech Hardware Interfacing & Disease Identification -->
+          <div class="problem-card" data-category="biotech">
+            <div>
+              <div class="problem-header">
+                <div class="problem-icon-wrapper">
+                  <i class="fa-solid fa-dna"></i>
+                </div>
+                <span class="impact-badge">Hardware-Cloud Streamlined</span>
+              </div>
+
+              <h3 class="problem-title">
+                Bridging Lab Hardware Devices with Web APIs for Disease Diagnostics
+              </h3>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">The Challenge</span>
+                <p class="problem-text">
+                  Translating scientist-defined business logic and raw hardware signals into
+                  reliable disease identification workflows was prone to communication bottlenecks.
+                </p>
+              </div>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">Engineered Solution</span>
+                <p class="solution-text">
+                  Developed Web API interfacing with Laser and DAQ-205 laboratory hardware devices,
+                  executing complex protein sequence analysis algorithms with high throughput.
+                </p>
+              </div>
+            </div>
+
+            <div class="tech-pills">
+              <span class="tech-pill">ASP.NET Core Web API</span>
+              <span class="tech-pill">Angular 17</span>
+              <span class="tech-pill">Hardware DAQ-205</span>
+              <span class="tech-pill">Protein Analysis</span>
+              <span class="tech-pill">Azure</span>
+            </div>
+          </div>
+
+          <!-- Problem 5: Multi-User Payroll & Accounting Automation -->
+          <div class="problem-card" data-category="enterprise">
+            <div>
+              <div class="problem-header">
+                <div class="problem-icon-wrapper">
+                  <i class="fa-solid fa-calculator"></i>
+                </div>
+                <span class="impact-badge">60% Manual Payroll Cut</span>
+              </div>
+
+              <h3 class="problem-title">
+                Complex Manual Salary Processing & Financial Discrepancies
+              </h3>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">The Challenge</span>
+                <p class="problem-text">
+                  Calculating monthly salaries, tax withholdings, and trial balances for 700+ staff
+                  across departments was manual and error-prone.
+                </p>
+              </div>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">Engineered Solution</span>
+                <p class="solution-text">
+                  Architected a 1-click salary processing system with single/double-entry financial
+                  modules generating instant Balance Sheet, Trial Balance, and department reports.
+                </p>
+              </div>
+            </div>
+
+            <div class="tech-pills">
+              <span class="tech-pill">ASP.NET Core MVC</span>
+              <span class="tech-pill">EF Core</span>
+              <span class="tech-pill">LINQ</span>
+              <span class="tech-pill">MySQL</span>
+              <span class="tech-pill">Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- Problem 6: APNs Certificate Inspection & Validation -->
+          <div class="problem-card" data-category="perf">
+            <div>
+              <div class="problem-header">
+                <div class="problem-icon-wrapper">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <span class="impact-badge">Zero Config Errors</span>
+              </div>
+
+              <h3 class="problem-title">
+                APNs Push Notification Certificate Configuration Failures
+              </h3>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">The Challenge</span>
+                <p class="problem-text">
+                  Parsing and validating Apple Push Notification (.p8, .p12, .pem) certificate
+                  metadata manually led to frequent push delivery downtime.
+                </p>
+              </div>
+
+              <div class="problem-detail-block">
+                <span class="detail-label">Engineered Solution</span>
+                <p class="solution-text">
+                  Engineered a dedicated C# backend utility that automatically reads, parses,
+                  validates expiration, and extracts metadata from raw Apple certificate files.
+                </p>
+              </div>
+            </div>
+
+            <div class="tech-pills">
+              <span class="tech-pill">C#</span>
+              <span class="tech-pill">ASP.NET Core API</span>
+              <span class="tech-pill">Apple Certificates</span>
+              <span class="tech-pill">Security Parsing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Expertise & Architecture -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Technical Proficiency</span>
+          <h2 class="section-title">Core Skills & Engineering Stack</h2>
+          <p class="section-description">
+            Built on solid object-oriented fundamentals, clean architecture principles, and modern
+            cloud ecosystem tools.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3 class="skill-card-title">
+              <i class="fa-solid fa-code"></i> Languages & Frameworks
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-badge">C#</span>
+              <span class="skill-badge">ASP.NET Core</span>
+              <span class="skill-badge">ASP.NET Web API</span>
+              <span class="skill-badge">ASP.NET Core MVC</span>
+              <span class="skill-badge">Angular (17-19)</span>
+              <span class="skill-badge">NestJS</span>
+              <span class="skill-badge">Next.js</span>
+              <span class="skill-badge">Python (FastAPI)</span>
+              <span class="skill-badge">SQL & LINQ</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-card-title">
+              <i class="fa-solid fa-cubes"></i> Architecture & Patterns
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-badge">Clean Architecture</span>
+              <span class="skill-badge">N-Layer Architecture</span>
+              <span class="skill-badge">SOLID Principles</span>
+              <span class="skill-badge">Repository Pattern</span>
+              <span class="skill-badge">Unit of Work</span>
+              <span class="skill-badge">CQRS</span>
+              <span class="skill-badge">RESTful API Design</span>
+              <span class="skill-badge">DRY Principles</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-card-title"><i class="fa-solid fa-robot"></i> AI & Integrations</h3>
+            <div class="skill-tags">
+              <span class="skill-badge">OpenAI GPT-4o</span>
+              <span class="skill-badge">RAG Systems</span>
+              <span class="skill-badge">ElevenLabs AI (Voice)</span>
+              <span class="skill-badge">OAuth 2.0 / JWT</span>
+              <span class="skill-badge">Stripe Payment Gateway</span>
+              <span class="skill-badge">Toast POS API</span>
+              <span class="skill-badge">Hardware DAQ Devices</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-card-title"><i class="fa-solid fa-cloud"></i> Cloud, DB & DevOps</h3>
+            <div class="skill-tags">
+              <span class="skill-badge">Azure App Service</span>
+              <span class="skill-badge">Azure SQL Database</span>
+              <span class="skill-badge">AWS (EC2, S3, SES)</span>
+              <span class="skill-badge">SQL Server</span>
+              <span class="skill-badge">PostgreSQL</span>
+              <span class="skill-badge">Dapper & EF Core</span>
+              <span class="skill-badge">Azure DevOps & Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Recognition & Growth</span>
+          <h2 class="section-title">Honors & Certifications</h2>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div>
+              <h3 class="achievement-title">Star of the Month</h3>
+              <div class="achievement-date">June 2025 • Anviam Solution Pvt Ltd</div>
+              <p class="achievement-desc">
+                Awarded for consistently exceeding performance expectations, solving complex
+                engineering bottlenecks, and delivering top-tier solutions.
+              </p>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div>
+              <h3 class="achievement-title">Rising Star Award</h3>
+              <div class="achievement-date">Aug 2023 & Jan 2024 • Anviam Solution Pvt Ltd</div>
+              <p class="achievement-desc">
+                Recognized twice for outstanding technical performance, rapid problem resolution,
+                and team dedication.
+              </p>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <div>
+              <h3 class="achievement-title">"Clean Code" Certification</h3>
+              <div class="achievement-date">May 2025 • Udemy</div>
+              <p class="achievement-desc">
+                Mastered code refactoring, maintainability, architectural design patterns, and
+                writing production-ready robust code.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Career Journey</span>
+          <h2 class="section-title">Experience & Education</h2>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-role">Software Engineer</h3>
+            <div class="timeline-company">Anviam Solution Pvt Ltd</div>
+            <div class="timeline-period">
+              <i class="fa-regular fa-calendar"></i> Jan 2023 – Aug 2026 (3.8 Years)
+            </div>
+            <p class="problem-text">
+              Engineered enterprise backend services, scalable Web APIs, AI voice/text workflows,
+              hardware integration modules, and cloud databases using ASP.NET Core, C#, SQL Server,
+              Azure, NestJS, and Angular.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-role">B.Tech in Computer Science & Engineering</h3>
+            <div class="timeline-company">I.K. Gujral Punjab Technical University</div>
+            <div class="timeline-period">
+              <i class="fa-regular fa-calendar"></i> 2019 – 2023 • CGPA: 8.32 / 10
+            </div>
+            <p class="problem-text">
+              Graduated with Distinction in Computer Science, focusing on Software Architecture,
+              Database Management Systems, Data Structures, and Web Technologies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <span class="section-subtitle">Let's Connect</span>
+          <h2 class="section-title">Have a Problem to Solve?</h2>
+          <p class="section-description">
+            Whether you need to scale your backend architecture, optimize database query
+            performance, or integrate AI into your application—I'm ready to help.
+          </p>
+
+          <div class="contact-methods">
+            <button class="contact-pill" id="copyEmailBtn" data-email="prince.chand.dev@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <span id="emailText">prince.chand.dev@gmail.com</span>
+              <i class="fa-solid fa-copy" style="font-size: 0.8rem; margin-left: 0.25rem"></i>
+            </button>
+
+            <a href="tel:+919888725336" class="contact-pill">
+              <i class="fa-solid fa-phone"></i>
+              <span>(+91) 9888725336</span>
+            </a>
+
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-pill"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+      <i class="fa-solid fa-circle-check"></i>
+      <span id="toastMsg">Copied to clipboard!</span>
     </div>
-  </section>
 
-  <!-- Toast Notification -->
-  <div class="toast" id="toast">
-    <i class="fa-solid fa-circle-check"></i>
-    <span id="toastMsg">Copied to clipboard!</span>
-  </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          © 2026 Prince Chand. All rights reserved. Crafted with clean code & modern aesthetics.
+        </p>
+      </div>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2026 Prince Chand. All rights reserved. Crafted with clean code & modern aesthetics.</p>
-    </div>
-  </footer>
-
-  <!-- Script -->
-  <script src="script.js"></script>
-</body>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>

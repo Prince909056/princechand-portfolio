@@ -18,7 +18,7 @@ import { CommonModule } from '@angular/common';
             <div class="timeline-dot"></div>
             <h3 class="timeline-role">Software Engineer</h3>
             <div class="timeline-company">Anviam Solution Pvt Ltd</div>
-            <div class="timeline-period"><i class="fa-regular fa-calendar"></i> Jan 2023 – Present (3.8+ Years)</div>
+            <div class="timeline-period"><i class="fa-regular fa-calendar"></i> Jan 2023 – Aug 2026 (3.8 Years)</div>
             <p class="problem-text">
               Engineered enterprise backend services, scalable Web APIs, AI voice/text workflows, hardware integration modules, and cloud databases using ASP.NET Core, C#, SQL Server, Azure, NestJS, and Angular.
             </p>
@@ -38,4 +38,4 @@ import { CommonModule } from '@angular/common';
     </section>
   `
 })
-export class ExperienceComponent {}
+export class ExperienceComponent { }
