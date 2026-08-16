@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../services/theme.service';
 
@@ -15,12 +15,36 @@ import { ThemeService } from '../../services/theme.service';
         </a>
 
         <ul class="nav-links" [class.active]="mobileMenuOpen()">
-          <li><a href="#hero" (click)="onNavClick($event, 'hero')" class="nav-link active">Home</a></li>
-          <li><a href="#problems" (click)="onNavClick($event, 'problems')" class="nav-link">Problems Solved</a></li>
-          <li><a href="#skills" (click)="onNavClick($event, 'skills')" class="nav-link">Skills</a></li>
-          <li><a href="#achievements" (click)="onNavClick($event, 'achievements')" class="nav-link">Achievements</a></li>
-          <li><a href="#experience" (click)="onNavClick($event, 'experience')" class="nav-link">Experience</a></li>
-          <li><a href="#contact" (click)="onNavClick($event, 'contact')" class="nav-link">Contact</a></li>
+          <li>
+            <a href="#hero" (click)="onNavClick($event, 'hero')" class="nav-link" [class.active]="activeSection() === 'hero'">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#problems" (click)="onNavClick($event, 'problems')" class="nav-link" [class.active]="activeSection() === 'problems'">
+              Problems Solved
+            </a>
+          </li>
+          <li>
+            <a href="#skills" (click)="onNavClick($event, 'skills')" class="nav-link" [class.active]="activeSection() === 'skills'">
+              Skills
+            </a>
+          </li>
+          <li>
+            <a href="#achievements" (click)="onNavClick($event, 'achievements')" class="nav-link" [class.active]="activeSection() === 'achievements'">
+              Achievements
+            </a>
+          </li>
+          <li>
+            <a href="#experience" (click)="onNavClick($event, 'experience')" class="nav-link" [class.active]="activeSection() === 'experience'">
+              Experience
+            </a>
+          </li>
+          <li>
+            <a href="#contact" (click)="onNavClick($event, 'contact')" class="nav-link" [class.active]="activeSection() === 'contact'">
+              Contact
+            </a>
+          </li>
           <li class="mobile-cta-item">
             <a href="#contact" (click)="onNavClick($event, 'contact')" class="btn btn-primary mobile-drawer-btn">
               <i class="fa-solid fa-paper-plane"></i> Get in Touch
@@ -42,9 +66,22 @@ import { ThemeService } from '../../services/theme.service';
     </nav>
   `
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy {
   readonly themeService = inject(ThemeService);
   readonly mobileMenuOpen = signal<boolean>(false);
+  readonly activeSection = signal<string>('hero');
+
+  private scrollListener: any;
+
+  ngOnInit(): void {
+    this.initScrollHighlighter();
+  }
+
+  ngOnDestroy(): void {
+    if (this.scrollListener) {
+      window.removeEventListener('scroll', this.scrollListener);
+    }
+  }
 
   toggleMobileMenu(): void {
     this.mobileMenuOpen.update(state => !state);
@@ -53,6 +90,7 @@ export class NavbarComponent {
   onNavClick(event: Event, targetId: string): void {
     event.preventDefault();
     this.mobileMenuOpen.set(false);
+    this.activeSection.set(targetId);
     
     const element = document.getElementById(targetId);
     if (element) {
@@ -65,5 +103,28 @@ export class NavbarComponent {
         behavior: 'smooth'
       });
     }
+  }
+
+  private initScrollHighlighter(): void {
+    const sections = ['hero', 'problems', 'skills', 'achievements', 'experience', 'contact'];
+    
+    this.scrollListener = () => {
+      const scrollY = window.pageYOffset;
+      
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const sectionHeight = element.offsetHeight;
+          const sectionTop = element.offsetTop - 120;
+          
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            this.activeSection.set(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', this.scrollListener, { passive: true });
   }
 }
