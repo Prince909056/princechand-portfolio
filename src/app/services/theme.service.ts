@@ -13,9 +13,8 @@ export class ThemeService {
   }
 
   private initTheme(): void {
-    const savedTheme = localStorage.getItem('theme') as Theme | null;
-    const initialTheme: Theme = savedTheme ? savedTheme : 'dark';
-    this.setTheme(initialTheme);
+    // Enforce dark theme as the default on app initialization
+    this.setTheme('dark');
   }
 
   toggleTheme(): void {
