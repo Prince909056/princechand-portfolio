@@ -154,6 +154,19 @@ src/
 
 ---
 
+## 🤖 GitHub Actions CI/CD Pipeline
+
+The project includes an automated **GitHub Actions Workflow** file at [`.github/workflows/deploy.yml`](file:///c:/prince_chand/portfolio-01/.github/workflows/deploy.yml).
+
+Whenever changes are pushed to the `main` branch, GitHub Actions automatically:
+1. Checks out the code.
+2. Sets up Node.js v20.
+3. Installs dependencies (`npm ci`).
+4. Compiles the Angular production build (`npm run build -- --base-href /princechand-portfolio/`).
+5. Deploys the built application automatically to **GitHub Pages**.
+
+---
+
 ## 🏆 Honors & Recognition
 
 - 🌟 [**Star of the Month** (June 2025)](https://www.linkedin.com/posts/anviamsolutions_anviamrockstars-aboveandbeyond-teamanviam-activity-7345398424978001921-TGYZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADI--QUBFqx3OIYgf8sBrrYLaIE75o5D_ik) – Anviam Solution Pvt Ltd
